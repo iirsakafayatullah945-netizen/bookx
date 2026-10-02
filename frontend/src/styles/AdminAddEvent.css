@@ -1,0 +1,174 @@
+/* =========================================================
+   ADMIN ADD EVENT FORM
+========================================================= */
+
+.admin-add-event {
+  min-height: 100vh;
+  background: #F7F3EA;
+  padding: 60px 7% 90px;
+}
+
+.admin-add-event h1 {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  text-align: center;
+
+  color: #1F5D50;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.admin-add-event form {
+  max-width: 700px;
+  margin: 0 auto;
+
+  background: #ffffff;
+
+  border: 1px solid #E5DFD3;
+  border-radius: 17px;
+
+  padding: 40px;
+
+  box-shadow: 0 10px 35px rgba(31, 93, 80, 0.07);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.admin-add-event .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-add-event .form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.admin-add-event label {
+  color: #1F5D50;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.admin-add-event input,
+.admin-add-event select,
+.admin-add-event textarea {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  border: 1px solid #D8D0C2;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #26332F;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: all 0.25s ease;
+}
+
+.admin-add-event select {
+  cursor: pointer;
+}
+
+.admin-add-event textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.admin-add-event input:focus,
+.admin-add-event select:focus,
+.admin-add-event textarea:focus {
+  border-color: #D9A441;
+  box-shadow: 0 0 0 4px rgba(217, 164, 65, 0.1);
+}
+
+/* ================= SUBMIT ================= */
+
+.admin-add-event .form-submit {
+  grid-column: 1 / -1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 10px;
+}
+
+.admin-add-event button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #D9A441;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 9px;
+
+  padding: 13px 34px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  transition: all 0.25s ease;
+}
+
+.admin-add-event button:hover {
+  background: #B8872F;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(217, 164, 65, 0.25);
+}
+
+/* ================= MESSAGE ================= */
+
+.admin-add-event .form-message {
+  margin-top: 16px;
+  padding: 11px 16px;
+
+  border-radius: 7px;
+
+  font-size: 13.5px;
+  text-align: center;
+}
+
+.admin-add-event .form-message.success {
+  background: #f5faf8;
+  border: 1px solid #d5e8e3;
+  color: #1F5D50;
+}
+
+.admin-add-event .form-message.error {
+  background: #fff1f1;
+  border: 1px solid #f0caca;
+  color: #b42318;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+  .admin-add-event {
+    padding: 45px 5% 70px;
+  }
+
+  .admin-add-event h1 {
+    font-size: 25px;
+  }
+
+  .admin-add-event form {
+    grid-template-columns: 1fr;
+    padding: 25px;
+  }
+
+  .admin-add-event button {
+    width: 100%;
+  }
+}

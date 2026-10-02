@@ -1,0 +1,166 @@
+/* =========================================================
+   ADMIN EDIT EVENT FORM
+========================================================= */
+
+.admin-edit-event {
+  min-height: 100vh;
+  background: #F7F3EA;
+  padding: 60px 7% 90px;
+}
+
+.admin-edit-event h1 {
+  max-width: 750px;
+  margin: 0 auto 12px;
+
+  color: #1F5D50;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.admin-edit-event > a {
+  display: block;
+  max-width: 750px;
+  margin: 0 auto 30px;
+
+  color: #3A806F;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.admin-edit-event > a:hover {
+  text-decoration: underline;
+}
+
+.admin-edit-event form {
+  max-width: 750px;
+  margin: 0 auto;
+
+  background: #ffffff;
+
+  border: 1px solid #E5DFD3;
+  border-radius: 17px;
+
+  padding: 40px;
+
+  box-shadow: 0 10px 35px rgba(31, 93, 80, 0.07);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-edit-event label {
+  color: #1F5D50;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.admin-edit-event label:not(:first-child) {
+  margin-top: 20px;
+}
+
+.admin-edit-event input,
+.admin-edit-event select,
+.admin-edit-event textarea {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  border: 1px solid #D8D0C2;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #26332F;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: all 0.25s ease;
+}
+
+.admin-edit-event select {
+  cursor: pointer;
+}
+
+.admin-edit-event textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.admin-edit-event input:focus,
+.admin-edit-event select:focus,
+.admin-edit-event textarea:focus {
+  border-color: #D9A441;
+  box-shadow: 0 0 0 4px rgba(217, 164, 65, 0.1);
+}
+
+.admin-edit-event button {
+  margin-top: 28px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #D9A441;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 9px;
+
+  padding: 14px 24px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  transition: all 0.25s ease;
+}
+
+.admin-edit-event button:hover {
+  background: #B8872F;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(217, 164, 65, 0.25);
+}
+
+/* ================= MESSAGE ================= */
+
+.admin-edit-event .form-message {
+  margin-top: 18px;
+  padding: 12px 15px;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+  text-align: center;
+}
+
+.admin-edit-event .form-message.success {
+  background: #f5faf8;
+  border: 1px solid #d5e8e3;
+  color: #1F5D50;
+}
+
+.admin-edit-event .form-message.error {
+  background: #fff1f1;
+  border: 1px solid #f0caca;
+  color: #b42318;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+  .admin-edit-event {
+    padding: 45px 5% 70px;
+  }
+
+  .admin-edit-event h1 {
+    font-size: 26px;
+  }
+
+  .admin-edit-event form {
+    padding: 25px;
+  }
+}

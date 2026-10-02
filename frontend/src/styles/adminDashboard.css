@@ -1,0 +1,163 @@
+/* =========================================================
+   ADMIN DASHBOARD
+========================================================= */
+
+.admin-dashboard {
+  min-height: 100vh;
+  background: #F7F3EA;
+  padding: 60px 7% 90px;
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1200px;
+  margin: 0 auto 50px;
+
+  padding-bottom: 25px;
+  border-bottom: 1px solid #E5DFD3;
+}
+
+.admin-header p {
+  color: #D9A441;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  margin-bottom: 8px;
+}
+
+.admin-header h1 {
+  color: #1F5D50;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.admin-header button {
+  padding: 12px 22px;
+
+  background: transparent;
+  color: #1F5D50;
+
+  border: 1px solid #1F5D50;
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: all 0.25s ease;
+}
+
+.admin-header button:hover {
+  background: #1F5D50;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(31, 93, 80, 0.18);
+}
+
+/* ================= CARDS GRID ================= */
+
+.admin-cards {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.admin-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #E5DFD3;
+  border-radius: 17px;
+
+  padding: 34px 30px;
+
+  box-shadow: 0 8px 30px rgba(31, 93, 80, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.admin-card:hover {
+  transform: translateY(-6px);
+  border-color: #D8C9A5;
+  box-shadow: 0 20px 45px rgba(31, 93, 80, 0.13);
+}
+
+.admin-card h2 {
+  color: #1F5D50;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.admin-card p {
+  color: #66736E;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Links inside admin cards, stacked with spacing */
+
+.admin-card a {
+  display: inline-block;
+  width: auto;
+}
+
+.admin-card a + a {
+  margin-top: 10px;
+}
+
+.admin-card a.primary-btn {
+  padding: 10px 22px;
+  font-size: 14px;
+  width: auto;
+}
+
+.admin-card a.back-booking {
+  color: #3A806F;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.admin-card a.back-booking:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .admin-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .admin-dashboard {
+    padding: 45px 5% 70px;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .admin-header h1 {
+    font-size: 28px;
+  }
+
+  .admin-card {
+    padding: 25px;
+  }
+}

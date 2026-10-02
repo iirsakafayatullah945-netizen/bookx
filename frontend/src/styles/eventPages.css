@@ -1,0 +1,1534 @@
+/* =========================================================
+   EVENTPK / BOOK.X
+   EVENT PAGES STYLESHEET
+   Events + Event Details + Booking
+========================================================= */
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.event-page,
+.event-details-page,
+.event-booking-page {
+  width: 100%;
+  min-height: calc(100vh - 75px);
+  background: #f5f7fb;
+  padding: 60px 7%;
+  color: #222;
+}
+
+.event-page *,
+.event-details-page *,
+.event-booking-page * {
+  box-sizing: border-box;
+}
+
+.event-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 12px 24px;
+
+  border: none;
+  border-radius: 7px;
+
+  background:  #efa72f;;
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.event-primary-btn:hover {
+  background:  #efa72f;;
+  transform: translateY(-2px);
+}
+
+.event-primary-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.event-back-link {
+  display: inline-block;
+
+  margin-top: 18px;
+
+  color:  #efa72f;;
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.event-back-link:hover {
+  color: #f5b400;
+}
+
+
+/* =========================================================
+   EVENTS PAGE
+========================================================= */
+
+.event-page {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+
+/* ---------- PAGE HEADER ---------- */
+
+.event-page-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.event-page-header p {
+  margin: 0 0 10px;
+
+  color: #f5b400;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.event-page-header h1 {
+  margin: 0 0 12px;
+
+  color: #0b2b61;
+
+  font-size: 46px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.event-page-header span {
+  display: block;
+
+  color: #666;
+
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+
+/* ---------- SEARCH ---------- */
+
+.event-search-section {
+  max-width: 950px;
+
+  display: grid;
+  grid-template-columns: 1fr 230px;
+  gap: 15px;
+
+  margin: 0 auto 55px;
+  padding: 18px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.event-search-section input,
+.event-search-section select {
+  width: 100%;
+
+  height: 48px;
+
+  padding: 0 15px;
+
+  border: 1px solid #d9dfe8;
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #333;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.event-search-section input:focus,
+.event-search-section select:focus {
+  border-color: #0b2b61;
+
+  box-shadow:
+    0 0 0 3px rgba(11, 43, 97, 0.08);
+}
+
+
+/* =========================================================
+   EVENT CATEGORY SECTION
+========================================================= */
+
+.events-list-section {
+  width: 100%;
+}
+
+.event-category-section {
+  margin-bottom: 60px;
+}
+
+
+/* ---------- CATEGORY HEADER ---------- */
+
+.event-category-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid #dfe4eb;
+}
+
+.event-category-header span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #f5b400;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.event-category-header h2 {
+  margin: 0;
+
+  color: #0b2b61;
+
+  font-size: 28px;
+  font-weight: 750;
+}
+
+.event-category-header strong {
+  color: #777;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   EVENTS CARD GRID
+========================================================= */
+
+.events-card-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+
+/* =========================================================
+   EVENT LIST CARD
+========================================================= */
+
+.event-list-card {
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 5px 22px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.event-list-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.13);
+}
+
+
+/* ---------- EVENT IMAGE ---------- */
+
+.event-list-image {
+  width: 100%;
+  height: 210px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0b2b61,
+      #174b98
+    );
+}
+
+.event-list-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.event-list-card:hover .event-list-image img {
+  transform: scale(1.04);
+}
+
+
+/* ---------- IMAGE PLACEHOLDER ---------- */
+
+.event-image-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0b2b61,
+      #174b98
+    );
+
+  color: #ffffff;
+
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.event-image-placeholder::first-letter {
+  color: #f5b400;
+}
+
+
+/* ---------- EVENT CONTENT ---------- */
+
+.event-list-content {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
+  padding: 23px;
+}
+
+.event-type-label {
+  display: inline-block;
+
+  width: fit-content;
+
+  margin-bottom: 9px;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  background: #fff4d6;
+
+  color: #946c00;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.event-list-content h2 {
+  margin: 3px 0 16px;
+
+  color: #0b2b61;
+
+  font-size: 21px;
+  line-height: 1.3;
+}
+
+.event-list-content > p {
+  margin: 0 0 9px;
+
+  color: #666;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* ---------- CARD BOTTOM ---------- */
+
+.event-card-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.event-card-bottom div {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card-bottom span {
+  margin-bottom: 4px;
+
+  color: #888;
+
+  font-size: 12px;
+}
+
+.event-card-bottom strong {
+  color: #0b2b61;
+
+  font-size: 19px;
+}
+
+
+/* ---------- VIEW DETAILS BUTTON ---------- */
+
+.event-view-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 15px;
+
+  border-radius: 6px;
+
+  background: #0b2b61;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition: 0.3s;
+}
+
+.event-view-btn:hover {
+  background:  #efa72f;;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   LOADING / ERROR / NOT FOUND
+========================================================= */
+
+.event-message,
+.event-not-found,
+.event-booking-loading {
+  max-width: 600px;
+
+  margin: 50px auto;
+
+  padding: 45px 30px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.event-message h2,
+.event-not-found h1,
+.event-booking-loading h1 {
+  margin-bottom: 12px;
+
+  color: #0b2b61;
+}
+
+.event-message p,
+.event-not-found p,
+.event-booking-loading p {
+  margin-bottom: 20px;
+
+  color: #666;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   EVENT DETAILS PAGE
+========================================================= */
+
+.event-details-page {
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  padding-top: 45px;
+}
+
+
+/* ---------- HERO IMAGE ---------- */
+
+.event-details-image {
+  width: 100%;
+  max-width: 1250px;
+
+  height: 430px;
+
+  margin: 0 auto 35px;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0b2b61,
+      #174b98
+    );
+
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.event-details-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* ---------- LARGE PLACEHOLDER ---------- */
+
+.event-large-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0b2b61,
+      #174b98
+    );
+
+  color: #ffffff;
+
+  font-size: 45px;
+  font-weight: 800;
+}
+
+
+/* ---------- DETAILS MAIN CONTAINER ---------- */
+
+.event-details-container {
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr) 350px;
+
+  gap: 35px;
+
+  align-items: start;
+}
+
+
+/* ---------- LEFT SIDE ---------- */
+
+.event-details-main {
+  min-width: 0;
+
+  padding: 35px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 5px 22px rgba(0, 0, 0, 0.07);
+}
+
+.event-type {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  background: #fff4d6;
+
+  color: #946c00;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.event-details-main > h1 {
+  margin: 0 0 18px;
+
+  color: #0b2b61;
+
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.event-description {
+  margin-bottom: 30px;
+
+  color: #666;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   EVENT INFORMATION ROUTE
+========================================================= */
+
+.event-info-route {
+  display: grid;
+
+  grid-template-columns:
+    1fr 60px 1fr;
+
+  align-items: center;
+
+  margin: 25px 0;
+
+  padding: 22px;
+
+  background: #f5f7fb;
+
+  border-radius: 10px;
+}
+
+.event-info-route > div:not(.event-info-arrow) {
+  text-align: center;
+}
+
+.event-info-route span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #888;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.event-info-route h2 {
+  margin: 0;
+
+  color: #0b2b61;
+
+  font-size: 20px;
+}
+
+.event-info-arrow {
+  text-align: center;
+
+  color: #f5b400;
+
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   DETAIL INFORMATION
+========================================================= */
+
+.event-detail-info {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+.event-detail-info > div {
+  padding: 18px;
+
+  border: 1px solid #e5e8ed;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+}
+
+.event-detail-info span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #888;
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+}
+
+.event-detail-info strong {
+  display: block;
+
+  color: #0b2b61;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   EVENT ABOUT SECTION
+========================================================= */
+
+.event-about-section,
+.event-description-section {
+  margin-top: 35px;
+
+  padding-top: 30px;
+
+  border-top: 1px solid #e5e8ed;
+}
+
+.event-about-section h2,
+.event-description-section h2 {
+  margin: 0 0 18px;
+
+  color: #0b2b61;
+
+  font-size: 24px;
+}
+
+.event-about-section p,
+.event-description-section p {
+  margin: 0 0 11px;
+
+  color: #666;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+.event-about-section strong {
+  color: #0b2b61;
+}
+
+
+/* =========================================================
+   RIGHT BOOKING CARD
+========================================================= */
+
+.event-booking-card {
+  position: sticky;
+  top: 100px;
+
+  padding: 30px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.09);
+
+  border-top: 4px solid #f5b400;
+}
+
+.event-booking-card > p:first-child {
+  margin: 0 0 7px;
+
+  color: #888;
+
+  font-size: 13px;
+}
+
+.event-booking-card > h2 {
+  margin: 0;
+
+  color: #0b2b61;
+
+  font-size: 32px;
+}
+
+.event-booking-card > span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #888;
+
+  font-size: 13px;
+}
+
+.event-price-box {
+  margin: 25px 0;
+
+  padding: 15px;
+
+  border-radius: 7px;
+
+  background: #f5f7fb;
+
+  color: #0b2b61;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+.event-booking-card .event-primary-btn {
+  width: 100%;
+}
+
+
+/* =========================================================
+   BOOKING PAGE
+========================================================= */
+
+.event-booking-page {
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  padding-top: 55px;
+}
+
+.event-booking-container {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 450px;
+
+  gap: 35px;
+
+  align-items: start;
+}
+
+
+/* ---------- LEFT SIDE ---------- */
+
+.event-booking-left {
+  padding: 30px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 5px 22px rgba(0, 0, 0, 0.07);
+}
+
+.event-booking-image {
+  width: 100%;
+  height: 300px;
+
+  margin-bottom: 25px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0b2b61,
+      #174b98
+    );
+}
+
+.event-booking-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.event-booking-left > h1 {
+  margin: 8px 0 18px;
+
+  color: #0b2b61;
+
+  font-size: 34px;
+  line-height: 1.25;
+}
+
+.event-booking-left > p {
+  margin: 0 0 9px;
+
+  color: #666;
+
+  font-size: 14px;
+}
+
+
+/* ---------- TICKET PRICE ---------- */
+
+.event-ticket-price {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 25px;
+  padding: 20px;
+
+  background: #f5f7fb;
+
+  border-radius: 9px;
+}
+
+.event-ticket-price span {
+  color: #888;
+
+  font-size: 13px;
+}
+
+.event-ticket-price strong {
+  margin: 4px 0;
+
+  color: #0b2b61;
+
+  font-size: 28px;
+}
+
+.event-ticket-price small {
+  color: #888;
+}
+
+
+/* ---------- DESCRIPTION ---------- */
+
+.event-booking-description {
+  margin-top: 30px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid #e5e8ed;
+}
+
+.event-booking-description h2 {
+  margin-bottom: 12px;
+
+  color: #0b2b61;
+
+  font-size: 23px;
+}
+
+.event-booking-description p {
+  color: #666;
+
+  line-height: 1.7;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   BOOKING RIGHT SIDE
+========================================================= */
+
+.event-booking-right {
+  padding: 30px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 5px 22px rgba(0, 0, 0, 0.07);
+}
+
+.event-booking-right > h2 {
+  margin: 0 0 8px;
+
+  color: #0b2b61;
+
+  font-size: 27px;
+}
+
+.event-booking-subtitle {
+  margin: 0 0 25px;
+
+  color: #777;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   LOGIN REQUIRED
+========================================================= */
+
+.event-login-required {
+  padding: 25px;
+
+  text-align: center;
+
+  border-radius: 9px;
+
+  background: #f5f7fb;
+}
+
+.event-login-required h2 {
+  margin-bottom: 10px;
+
+  color: #0b2b61;
+
+  font-size: 22px;
+}
+
+.event-login-required p {
+  margin-bottom: 20px;
+
+  color: #666;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   BOOKING FORM
+========================================================= */
+
+.event-booking-form {
+  width: 100%;
+}
+
+.event-form-group {
+  margin-bottom: 18px;
+}
+
+.event-form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #0b2b61;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.event-form-group input,
+.event-form-group select {
+  width: 100%;
+
+  height: 46px;
+
+  padding: 0 13px;
+
+  border: 1px solid #d9dfe8;
+
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #333;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.event-form-group input:focus,
+.event-form-group select:focus {
+  border-color: #0b2b61;
+
+  box-shadow:
+    0 0 0 3px rgba(11, 43, 97, 0.08);
+}
+
+
+/* =========================================================
+   SELECTED TICKETS
+========================================================= */
+
+.event-selected-box {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+  padding: 14px 16px;
+
+  border-radius: 7px;
+
+  background: #f5f7fb;
+}
+
+.event-selected-box span {
+  color: #666;
+
+  font-size: 14px;
+}
+
+.event-selected-box strong {
+  color: #0b2b61;
+
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   PAYMENT NOTE
+========================================================= */
+
+.event-payment-note {
+  margin: 20px 0;
+
+  padding: 15px;
+
+  border-left: 4px solid #f5b400;
+
+  border-radius: 6px;
+
+  background: #fff9e8;
+}
+
+.event-payment-note strong {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #0b2b61;
+
+  font-size: 14px;
+}
+
+.event-payment-note p {
+  margin: 0;
+
+  color: #666;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   BOOKING ERROR
+========================================================= */
+
+.event-booking-error {
+  margin: 15px 0;
+
+  padding: 12px 15px;
+
+  border-radius: 6px;
+
+  background: #fff0f0;
+
+  color: #c62828;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   TOTAL PRICE
+========================================================= */
+
+.event-total {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 22px 0;
+
+  padding: 18px 0;
+
+  border-top: 1px solid #e5e8ed;
+  border-bottom: 1px solid #e5e8ed;
+}
+
+.event-total span {
+  color: #666;
+
+  font-size: 15px;
+}
+
+.event-total strong {
+  color: #0b2b61;
+
+  font-size: 24px;
+}
+
+
+/* ---------- CONFIRM BOOKING ---------- */
+
+.event-confirm-btn {
+  width: 100%;
+
+  min-height: 50px;
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   SUCCESS CARD
+========================================================= */
+
+.event-success-card {
+  max-width: 650px;
+
+  margin: 30px auto;
+
+  padding: 45px 35px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.09);
+}
+
+.event-success-icon {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  background: #e7f7ed;
+
+  color: #16803c;
+
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.event-success-card h1 {
+  margin-bottom: 12px;
+
+  color: #0b2b61;
+
+  font-size: 32px;
+}
+
+.event-success-card > p {
+  margin: 7px 0;
+
+  color: #666;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   BOOKING SUMMARY
+========================================================= */
+
+.event-booking-summary {
+  margin: 25px 0;
+
+  padding: 20px;
+
+  border-radius: 8px;
+
+  background: #f5f7fb;
+
+  text-align: left;
+}
+
+.event-booking-summary p {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin: 0;
+
+  padding: 9px 0;
+
+  border-bottom: 1px solid #e2e5e9;
+
+  color: #666;
+
+  font-size: 14px;
+}
+
+.event-booking-summary p:last-child {
+  border-bottom: none;
+}
+
+.event-booking-summary strong {
+  color: #0b2b61;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .events-card-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .event-details-container {
+    grid-template-columns:
+      minmax(0, 1fr) 310px;
+  }
+
+  .event-booking-container {
+    grid-template-columns:
+      minmax(0, 1fr) 400px;
+  }
+}
+
+
+@media (max-width: 900px) {
+
+  .event-page,
+  .event-details-page,
+  .event-booking-page {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .event-details-container,
+  .event-booking-container {
+    grid-template-columns: 1fr;
+  }
+
+  .event-booking-card {
+    position: static;
+  }
+
+  .event-page-header h1 {
+    font-size: 40px;
+  }
+
+  .event-details-main > h1 {
+    font-size: 36px;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .event-page,
+  .event-details-page,
+  .event-booking-page {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .event-page-header h1 {
+    font-size: 32px;
+  }
+
+  .event-page-header span {
+    font-size: 15px;
+  }
+
+  .event-search-section {
+    grid-template-columns: 1fr;
+
+    padding: 15px;
+
+    margin-bottom: 40px;
+  }
+
+  .event-category-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .event-category-header h2 {
+    font-size: 24px;
+  }
+
+  .events-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-details-image {
+    height: 260px;
+
+    border-radius: 10px;
+  }
+
+  .event-details-main {
+    padding: 25px 20px;
+  }
+
+  .event-details-main > h1 {
+    font-size: 30px;
+  }
+
+  .event-info-route {
+    grid-template-columns:
+      1fr;
+
+    gap: 15px;
+  }
+
+  .event-info-arrow {
+    transform: rotate(90deg);
+  }
+
+  .event-detail-info {
+    grid-template-columns: 1fr;
+  }
+
+  .event-booking-card {
+    padding: 25px 20px;
+  }
+
+  .event-booking-left,
+  .event-booking-right {
+    padding: 25px 20px;
+  }
+
+  .event-booking-image {
+    height: 240px;
+  }
+
+  .event-booking-left > h1 {
+    font-size: 29px;
+  }
+
+  .event-success-card {
+    padding: 35px 20px;
+  }
+
+  .event-booking-summary p {
+    flex-direction: column;
+
+    gap: 3px;
+  }
+}
+
+
+@media (max-width: 400px) {
+
+  .event-page,
+  .event-details-page,
+  .event-booking-page {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .event-page-header h1 {
+    font-size: 28px;
+  }
+
+  .event-list-content {
+    padding: 18px;
+  }
+
+  .event-card-bottom {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .event-view-btn {
+    width: 100%;
+  }
+
+  .event-details-image {
+    height: 220px;
+  }
+
+  .event-details-main > h1 {
+    font-size: 27px;
+  }
+
+  .event-booking-left > h1 {
+    font-size: 26px;
+  }
+}
